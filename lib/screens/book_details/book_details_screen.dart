@@ -97,11 +97,7 @@ class BookDetailsScreen extends StatelessWidget {
                       const SizedBox(height: 4),
                       _infoRow("Category :", book.category),
                       const SizedBox(height: 4),
-                      _infoRow(
-                        "Rating :",
-                        book.rating.toStringAsFixed(2),
-                        valueStyle: const TextStyle(fontSize: 16),
-                      ),
+                      _ratingRow(book.rating),
                       const SizedBox(height: 8),
                       _infoRow(
                         "Pricing :",
@@ -199,5 +195,26 @@ Widget _infoRow(String label, String value, {TextStyle? valueStyle}) {
         ),
       ],
     ),
+  );
+}
+
+Widget _ratingRow(double rating) {
+  return Row(
+    children: [
+      const Text(
+        "Rating : ",
+        style: TextStyle(fontSize: 14, color: Colors.black),
+      ),
+      const Icon(Icons.star, color: Colors.amber, size: 20),
+      const SizedBox(width: 4),
+      Text(
+        "${rating.toStringAsFixed(2)} / 5",
+        style: const TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.w600,
+          color: Colors.black,
+        ),
+      ),
+    ],
   );
 }

@@ -54,4 +54,6 @@ flutter:
     - assets/logos/
     - assets/images/
 
-
+image_picker: ^1.1.0
+firebase_storage: ^12.0.0
+fluttertoast: ^8.0.9

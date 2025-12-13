@@ -361,9 +361,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
         }
 
         return GridView.builder(
-          padding: const EdgeInsets.only(
-            bottom: 16,
-          ), // 👈 add some bottom space
+          padding: const EdgeInsets.only(bottom: 16),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             crossAxisSpacing: 12,
@@ -373,10 +371,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
           itemCount: books.length,
           itemBuilder: (context, index) {
             final book = books[index];
-            return _buildBookCard(
-              context,
-              book,
-            ); // 👈 we’ll change this function next
+            return _buildBookCard(context, book);
           },
         );
       },
@@ -432,7 +427,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
 // simple model for local use
 class _CategoryItem {
   final String name;
-  final String image; // asset path
+  final String image;
 
   const _CategoryItem({required this.name, required this.image});
 }

@@ -126,9 +126,9 @@ class _CartScreenState extends State<CartScreen> {
                       ],
                     ),
                     const SizedBox(height: 4),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [Text('Shipping'), Text('\$10.00')],
+                      children: [Text('Shipping'), Text('\$10.00')],
                     ),
                     const SizedBox(height: 4),
                     Divider(color: Colors.grey.shade400),
